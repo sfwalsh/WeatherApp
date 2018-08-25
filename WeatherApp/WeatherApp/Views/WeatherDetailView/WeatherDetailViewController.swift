@@ -40,7 +40,10 @@ class WeatherDetailViewController: UIViewController, WeatherDetailView, Storyboa
                locationCountry: String?,
                temperature: String?,
                weatherStatus: String?) {
-        
+        locationTitleLabel.text = locationTitle
+        locationSubtitleLabel.text = locationCountry
+        temperatureLabel.text = temperature
+        weatherStatusLabel.text = weatherStatus
     }
 
 }

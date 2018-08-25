@@ -29,9 +29,11 @@ final class WeatherDetailPresenter {
     }
     
     private func updateView(with weather: Weather) {
-        view?.setup(with: weather.location?.name.capitalized,
-                    locationCountry: weather.location?.countryCode.uppercased(),
-                    temperature: weather.temperatureDisplayString(forLocale: Locale.current),
-                    weatherStatus: weather.title)
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.setup(with: weather.location?.name.capitalized,
+                        locationCountry: weather.location?.countryCode.uppercased(),
+                        temperature: weather.temperatureDisplayString(forLocale: Locale.current),
+                        weatherStatus: weather.title)
+        }
     }
 }

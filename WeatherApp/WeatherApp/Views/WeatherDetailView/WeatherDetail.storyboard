@@ -16,9 +16,51 @@
                     <view key="view" contentMode="scaleToFill" id="0rT-Ex-740">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io7-kT-3XH">
+                                <rect key="frame" x="171" y="124" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-js-eXI">
+                                <rect key="frame" x="156" y="481" width="62" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPc-ku-6Ib">
+                                <rect key="frame" x="101" y="571" width="173" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-Qx-pwW">
+                                <rect key="frame" x="135" y="84" width="106" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lkT-Qx-pwW" firstAttribute="top" secondItem="WYi-iH-qte" secondAttribute="top" constant="64" id="35b-fs-7ZF"/>
+                            <constraint firstItem="Io7-kT-3XH" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="Ecm-J5-mtQ"/>
+                            <constraint firstItem="WYi-iH-qte" firstAttribute="bottom" secondItem="WPc-ku-6Ib" secondAttribute="bottom" constant="64" id="NxL-G3-bVd"/>
+                            <constraint firstItem="WPc-ku-6Ib" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="Ysl-uK-EjQ"/>
+                            <constraint firstItem="fAI-js-eXI" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="atb-Xr-UcO"/>
+                            <constraint firstItem="WPc-ku-6Ib" firstAttribute="top" secondItem="fAI-js-eXI" secondAttribute="bottom" constant="13" id="gSZ-Vb-mbd"/>
+                            <constraint firstItem="Io7-kT-3XH" firstAttribute="top" secondItem="lkT-Qx-pwW" secondAttribute="bottom" constant="8" id="qLd-iC-Tzy"/>
+                            <constraint firstItem="lkT-Qx-pwW" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="ugT-GF-XNr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WYi-iH-qte"/>
                     </view>
+                    <connections>
+                        <outlet property="locationSubtitleLabel" destination="Io7-kT-3XH" id="aQw-2r-jDV"/>
+                        <outlet property="locationTitleLabel" destination="lkT-Qx-pwW" id="fHe-Na-8YW"/>
+                        <outlet property="temperatureLabel" destination="fAI-js-eXI" id="RoK-rX-sTe"/>
+                        <outlet property="weatherStatusLabel" destination="WPc-ku-6Ib" id="snW-3p-xY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZP-J6-JwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
