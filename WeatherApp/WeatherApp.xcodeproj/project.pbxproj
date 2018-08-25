@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BFB1B0B3213165F0009B0D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1B0B2213165F0009B0D2F /* AppDelegate.swift */; };
-		BFB1B0B5213165F0009B0D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1B0B4213165F0009B0D2F /* ViewController.swift */; };
+		BFB1B0B5213165F0009B0D2F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1B0B4213165F0009B0D2F /* MapViewController.swift */; };
 		BFB1B0B8213165F0009B0D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB1B0B6213165F0009B0D2F /* Main.storyboard */; };
 		BFB1B0BA213165F1009B0D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFB1B0B9213165F1009B0D2F /* Assets.xcassets */; };
 		BFB1B0BD213165F1009B0D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB1B0BB213165F1009B0D2F /* LaunchScreen.storyboard */; };
+		BFB1B0C521316699009B0D2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1B0C421316699009B0D2F /* MapView.swift */; };
+		BFB1B0C7213166AA009B0D2F /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1B0C6213166AA009B0D2F /* MapViewPresenter.swift */; };
+		BFB1B0C9213166B5009B0D2F /* MapViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1B0C8213166B5009B0D2F /* MapViewInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BFB1B0AF213165EF009B0D2F /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB1B0B2213165F0009B0D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFB1B0B4213165F0009B0D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFB1B0B4213165F0009B0D2F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BFB1B0B7213165F0009B0D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFB1B0B9213165F1009B0D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFB1B0BC213165F1009B0D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFB1B0BE213165F1009B0D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB1B0C421316699009B0D2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BFB1B0C6213166AA009B0D2F /* MapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		BFB1B0C8213166B5009B0D2F /* MapViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				BFB1B0B2213165F0009B0D2F /* AppDelegate.swift */,
-				BFB1B0B4213165F0009B0D2F /* ViewController.swift */,
+				BFB1B0B4213165F0009B0D2F /* MapViewController.swift */,
+				BFB1B0C421316699009B0D2F /* MapView.swift */,
+				BFB1B0C6213166AA009B0D2F /* MapViewPresenter.swift */,
+				BFB1B0C8213166B5009B0D2F /* MapViewInteractor.swift */,
 				BFB1B0B6213165F0009B0D2F /* Main.storyboard */,
 				BFB1B0B9213165F1009B0D2F /* Assets.xcassets */,
 				BFB1B0BB213165F1009B0D2F /* LaunchScreen.storyboard */,
@@ -135,7 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB1B0B5213165F0009B0D2F /* ViewController.swift in Sources */,
+				BFB1B0B5213165F0009B0D2F /* MapViewController.swift in Sources */,
+				BFB1B0C9213166B5009B0D2F /* MapViewInteractor.swift in Sources */,
+				BFB1B0C521316699009B0D2F /* MapView.swift in Sources */,
+				BFB1B0C7213166AA009B0D2F /* MapViewPresenter.swift in Sources */,
 				BFB1B0B3213165F0009B0D2F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29XC7B4KB4;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 29XC7B4KB4;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
