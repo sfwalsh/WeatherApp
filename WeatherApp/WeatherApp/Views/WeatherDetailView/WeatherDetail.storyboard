@@ -41,15 +41,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDL-NE-Lqn">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DIc-d0-FXG"/>
+                                    <constraint firstAttribute="height" constant="200" id="MsU-Hw-jl9"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lkT-Qx-pwW" firstAttribute="top" secondItem="WYi-iH-qte" secondAttribute="top" constant="64" id="35b-fs-7ZF"/>
                             <constraint firstItem="Io7-kT-3XH" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="Ecm-J5-mtQ"/>
                             <constraint firstItem="WYi-iH-qte" firstAttribute="bottom" secondItem="WPc-ku-6Ib" secondAttribute="bottom" constant="64" id="NxL-G3-bVd"/>
+                            <constraint firstItem="uDL-NE-Lqn" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="Oit-Do-zta"/>
                             <constraint firstItem="WPc-ku-6Ib" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="Ysl-uK-EjQ"/>
                             <constraint firstItem="fAI-js-eXI" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="atb-Xr-UcO"/>
                             <constraint firstItem="WPc-ku-6Ib" firstAttribute="top" secondItem="fAI-js-eXI" secondAttribute="bottom" constant="13" id="gSZ-Vb-mbd"/>
+                            <constraint firstItem="uDL-NE-Lqn" firstAttribute="centerY" secondItem="0rT-Ex-740" secondAttribute="centerY" id="kq5-W5-5Rv"/>
                             <constraint firstItem="Io7-kT-3XH" firstAttribute="top" secondItem="lkT-Qx-pwW" secondAttribute="bottom" constant="8" id="qLd-iC-Tzy"/>
                             <constraint firstItem="lkT-Qx-pwW" firstAttribute="centerX" secondItem="0rT-Ex-740" secondAttribute="centerX" id="ugT-GF-XNr"/>
                         </constraints>
