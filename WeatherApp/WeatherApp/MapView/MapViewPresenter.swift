@@ -16,8 +16,13 @@ final class MapViewPresenter {
         performInitialSetup()
     }
     
+    func didTapLocation(atCoordinate coordinate: CLLocationCoordinate2D) {
+        
+    }
+    
     private func performInitialSetup() {
         view?.setupMapView()
+        view?.setupTapGestureRecognizer()
         interactor.performInitialSetup()
         fetchUserLocation()
     }
