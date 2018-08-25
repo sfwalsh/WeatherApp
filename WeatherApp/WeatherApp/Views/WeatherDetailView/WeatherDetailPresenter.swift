@@ -31,7 +31,7 @@ final class WeatherDetailPresenter {
     private func updateView(with weather: Weather) {
         DispatchQueue.main.async { [weak self] in
             self?.view?.setup(with: weather.location?.name.capitalized,
-                        locationCountry: weather.location?.countryCode.uppercased(),
+                        locationCountry: weather.location?.countryName.uppercased(),
                         temperature: weather.temperatureDisplayString(forLocale: Locale.current),
                         weatherStatus: weather.title)
         }

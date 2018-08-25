@@ -15,4 +15,8 @@ struct Location {
         self.name = name
         self.countryCode = countryCode
     }
+    
+    var countryName: String {
+        return (Locale.current as NSLocale).displayName(forKey: .countryCode, value: countryCode) ?? countryCode
+    }
 }
