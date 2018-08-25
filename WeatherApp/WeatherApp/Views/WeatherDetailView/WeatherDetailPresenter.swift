@@ -14,6 +14,6 @@ final class WeatherDetailPresenter {
     }
     
     func viewDidLoad() {
-        
+
     }
 }

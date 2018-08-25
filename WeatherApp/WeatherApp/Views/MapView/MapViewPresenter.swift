@@ -17,7 +17,11 @@ final class MapViewPresenter {
     }
     
     func didTapLocation(atCoordinate coordinate: CLLocationCoordinate2D) {
-        
+        guard let weatherDetailView = WeatherDetailViewController.newInstance(withCoordinates: coordinate) else {
+            print("Uh oh...")
+            return
+        }
+        view?.presentView(view: weatherDetailView, routeType: .push)
     }
     
     private func performInitialSetup() {

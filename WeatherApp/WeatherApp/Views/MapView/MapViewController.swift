@@ -42,6 +42,15 @@ class MapViewController: UIViewController, MapView, MKMapViewDelegate {
         mapView.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    func presentView(view: UIViewController, routeType: RouteType) {
+        switch routeType {
+        case .push:
+            navigationController?.pushViewController(view, animated: true)
+        case .present:
+            (navigationController ?? self).present(view, animated: true, completion: nil)
+        }
+    }
+    
     @objc private func didTapMapView(gestureRecognizer: UIGestureRecognizer) {
         let tapPoint = gestureRecognizer.location(in: mapView)
         let tapCoordinate = mapView.convert(tapPoint, toCoordinateFrom: mapView)
