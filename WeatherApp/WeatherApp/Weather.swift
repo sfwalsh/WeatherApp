@@ -26,7 +26,6 @@ struct Weather: Decodable {
     
     private struct K {
         static let celsiusKelvinOffset: Double = 273.15
-        static let fahrenheitKelvinOffset: Double = -459.67
     }
     
     let location: Location?
@@ -38,12 +37,8 @@ struct Weather: Decodable {
         guard let temperature = temperature else {
             return nil
         }
-        
-        if locale.usesMetricSystem {
-            return "\(temperature - K.celsiusKelvinOffset) ºC"
-        } else {
-            return "\(temperature - K.fahrenheitKelvinOffset) ºF"
-        }
+        // FIXME: Convert to based on locale
+        return "\(temperature - K.celsiusKelvinOffset) ºC"
     }
     
     init(from decoder: Decoder) throws {
