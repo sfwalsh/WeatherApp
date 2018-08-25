@@ -4,6 +4,7 @@ import CoreLocation
 
 class WeatherDetailViewController: UIViewController, WeatherDetailView, StoryboardInstantiable {
     
+    
     static let viewControllerIdentifier: String = "WeatherDetailViewController"
     static let storyboardIdentifier: String = "WeatherDetail"
     
@@ -15,6 +16,11 @@ class WeatherDetailViewController: UIViewController, WeatherDetailView, Storyboa
         return viewController
     }
     
+    @IBOutlet weak var locationTitleLabel: UILabel!
+    @IBOutlet weak var locationSubtitleLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var weatherStatusLabel: UILabel!
+    
     private var presenter: WeatherDetailPresenter!
     
     override func viewDidLoad() {
@@ -24,6 +30,17 @@ class WeatherDetailViewController: UIViewController, WeatherDetailView, Storyboa
     
     func setupPresenter(with presenter: WeatherDetailPresenter) {
         self.presenter = presenter
+    }
+    
+    func presentErrorAlert(withText text: String) {
+        // FIXME
+    }
+    
+    func setup(with locationTitle: String?,
+               locationCountry: String?,
+               temperature: String?,
+               weatherStatus: String?) {
+        
     }
 
 }

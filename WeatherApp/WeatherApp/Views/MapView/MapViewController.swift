@@ -55,43 +55,6 @@ class MapViewController: UIViewController, MapView, MKMapViewDelegate {
         let tapPoint = gestureRecognizer.location(in: mapView)
         let tapCoordinate = mapView.convert(tapPoint, toCoordinateFrom: mapView)
         presenter.didTapLocation(atCoordinate: tapCoordinate)
-//        addAnnotation(atLocation: tapCoordinate)
-    }
-    
-    private func clearAllAnnotations(except annotation: MKAnnotation) {
-        let annotationsToRemove = mapView.annotations.filter({ $0.coordinate != annotation.coordinate })
-        mapView.removeAnnotations(annotationsToRemove)
-    }
-    
-    private func addAnnotation(atLocation location: CLLocationCoordinate2D) {
-        let locationAnnotation = MKPointAnnotation()
-        locationAnnotation.coordinate = location
-        
-        mapView.addAnnotation(locationAnnotation)
-//        clearAllAnnotations(except: locationAnnotation)
-    }
-    
-    
-    // MARK: MapViewDelegate Implementation
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? MKPointAnnotation else { return nil }
-        
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier)
-        
-        if annotationView == nil {
-            annotationView = MKMarkerAnnotationView(annotation: annotation,
-                                                 reuseIdentifier: annotationIdentifier)
-            annotationView?.canShowCallout = true
-        } else {
-            annotationView?.annotation = annotation
-        }
-        
-        return annotationView
-    }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
     }
 }
 

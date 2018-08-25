@@ -14,6 +14,24 @@ final class WeatherDetailPresenter {
     }
     
     func viewDidLoad() {
-
+        fetchWeather()
+    }
+    
+    private func fetchWeather() {
+        interactor.fetchWeather { [weak self] (weather) in
+            guard let weather = weather else {
+                self?.view?.presentErrorAlert(withText: "Could not fetch weather data")
+                return
+            }
+            
+            self?.updateView(with: weather)
+        }
+    }
+    
+    private func updateView(with weather: Weather) {
+        view?.setup(with: weather.location?.name.capitalized,
+                    locationCountry: weather.location?.countryCode.uppercased(),
+                    temperature: weather.temperatureDisplayString(forLocale: Locale.current),
+                    weatherStatus: weather.title)
     }
 }
